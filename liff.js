@@ -19,8 +19,6 @@ function initializeLiff(liffId) {
 }
 
 function sendText(text) {
-    // sendMessages(text);
-// }
 
 // LINEトーク画面上でメッセージ送信
 // function sendMessages(text) {
