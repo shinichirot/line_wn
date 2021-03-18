@@ -15,34 +15,36 @@
 
         <p class="mt-3">以下を入力し、送信を押してください</p>
         
-        <p class="mt-3">◆ お名前</p>
+        <p class="mt-3">[パート・ヘルパー希望の方のみ] 主な移動手段を教えて下さい</p>
         <div>
-            <textarea name="name" rows="1" cols="20" required></textarea>
+            <INPUT TYPE="radio" NAME="move" Value="車・バイク"> 車・バイク<BR>          
+            <INPUT TYPE="radio" NAME="move" Value="自転車"> 自転車<BR>          
+            <INPUT TYPE="radio" NAME="move" Value="徒歩・公共交通機関"> 徒歩・公共交通機関<BR>          
         </div>
 
-        <p class="mt-3">◆ 電話番号を教えて下さい</p>
-        <div>
-            <textarea name="tel" rows="1" cols="20" required></textarea>
-        </div>
+        <p class="mt-3">[パート希望の方のみ] 週の希望勤務日数を教えて下さい</p>
+        <select name="days">
+                <option value="未選択">選択してください</option>
+                <option value="週1日程度">週1日程度</option>
+                <option value="週2日程度">週2日程度</option>
+                <option value="週3日程度">週3日程度</option>
+                <option value="週4日程度">週4日程度</option>
+                <option value="週5日程度">週5日程度</option>
+                <option value="週6日程度">週6日程度</option>
+        </select>
 
-        
-   
-        
-        <p class="mt-3">◆ 面談希望日があれば、選択してください（任意）</p>
+         <p class="mt-3">◆ 入社可能予定日を教えてください</p>
         <div>
-            <input class="form-control w-100 mt-1" name="date" maxlength="10" type="date">
+            <input class="form-control w-100 mt-1" name="in_date" maxlength="10" type="date">
         </div>
         
-        
-        <!--      
-        <p class="mt-3">使用しているツールURL（SS等）</p>
+        <p class="mt-3">◆ その他、希望する条件やご質問事項があればご記入ください</p>
         <div>
-            <input class="form-control w-100 mt-1" name="tool">
+            <textarea name="other" rows="1" cols="20"></textarea>
         </div>
-        -->
-
-        <input type="submit" class="mt-4 btn btn-primary" value="送信">
-
+       
+        <input type="submit" class="mt-4 btn btn-primary" value="送信" onclick="send()">
+                
     </form>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -50,8 +52,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
-   <script src="liff.js"></script>
-   <script src="index.js"></script>
+ 
+    <script src="liff.js"></script>
+    <script src="index.js"></script>
 </body>
-
 </html>
