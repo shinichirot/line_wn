@@ -1,23 +1,16 @@
-var params = (new URL(document.location)).searchParams;
-var key = params.get('key');
-
 $(function () {
-    // 騾∽ｿ｡
     $('form').submit(function () {
 
-        sendText(`回答ありがとうございました`);
-        
-        var name = $('textarea[name="name"]').val();
-        var adress = $('textarea[name="adress"]').val();
-        var tel = $('textarea[name="tel"]').val();
-        var shikaku = $('input[name="shikaku"]').val();
-        
-        var date = $('input[name="date"]').val();
-       
-        var msg = `◆回答内容\n職種：${key}\n名前：${name}\n郵便番号：${adress}\n電話番号：${tel}\n資格：${shikaku}\n面談希望：${date}`;
+        sendText(`追加登録ありがとうございました`);
+        var move = $('input[name="move"]').val();
+        var days = $('select[name="days"]').val();
+        var in_date = $('input[name="in_date"]').val();
+        var other = $('textarea[name="other"]').val();
+              
+        var msg = `◆回答内容\n移動手段：${move}\n希望日数：${days}\n入社可能日：${in_date}\その他：${other}`;
         sendText(msg);
 
+       
         return false;
     });
 });
-
